@@ -6,7 +6,6 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    absolute: "",
     default: "NextApp",
     template: "%s |coding",
   },
