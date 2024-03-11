@@ -1,5 +1,6 @@
 import Link from "next/link";
 export default function products() {
+  const productId = 100;
   return (
     <>
       <Link href="/">Home</Link>
@@ -12,6 +13,9 @@ export default function products() {
       </h2>
       <h2>
         <Link href="products/3">product3</Link>
+      </h2>
+      <h2>
+        <Link href={`products/${productId}`}>product {productId}</Link>
       </h2>
     </>
   );
