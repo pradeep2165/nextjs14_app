@@ -4,6 +4,6 @@ export const metadata: Metadata = {
     absolute: "blog",
   },
 };
-export default function () {
+export default function page() {
   return <h1>blog</h1>;
 }
