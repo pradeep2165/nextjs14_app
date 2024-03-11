@@ -14,7 +14,6 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
     <div>
       <div>
         <input value={input} onChange={(e) => setInput(e.target.value)} />
-        //now side effect happen when we swap between tabs
       </div>
       {navLink.map((link) => {
         const isActive = pathname.startsWith(link.href);
