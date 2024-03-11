@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+import { useState } from "react";
 const navLink = [
   { name: "Register", href: "/register" },
   { name: "Login", href: "/login" },
@@ -9,9 +9,13 @@ const navLink = [
 ];
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-
+  const [input, setInput] = useState("");
   return (
     <div>
+      <div>
+        <input value={input} onChange={(e) => setInput(e.target.value)} />
+        //now side effect happen when we swap between tabs
+      </div>
       {navLink.map((link) => {
         const isActive = pathname.startsWith(link.href);
         return (
