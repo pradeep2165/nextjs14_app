@@ -4,7 +4,7 @@ import { NextRequest } from "next/server";
 export async function GET(request: NextRequest) {
   const requestHeaders = new Headers(request.headers);
   const headersList = headers();
-  cookies().set("resultsPerPage", 20);
+  cookies().set("resultsPerPage", "20");
   const theme = request.cookies.get("theme");
   console.log(headersList.get("Authorization"));
   console.log(requestHeaders.get("Authorization"));
